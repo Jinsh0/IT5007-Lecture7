@@ -74,7 +74,7 @@ async function addCharacter(_, args)
 	//to know and check in this terminal, is the args shown correctly
 	console.log(args)
 	const newcharacter = {'name': args.name, 'gender': args.gender}
-	//console.log(newcharacter)
+	//console.log(newcharacter), this while useful, a little too much information
 	result = await db.collection('characters').insertOne(newcharacter);
 	//can also print the result here, to make sure the insert is correct
 	return true
