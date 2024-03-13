@@ -1,0 +1,15 @@
+# name is String! which mean it a must
+type character{
+    name: String!
+    gender: String
+}
+
+# [character] means a list of character
+type Query{
+    getAllCharactersinfo :[character]
+    getCharacterinfo(name: String!):character
+}
+
+type Mutation{
+    addCharacter(name: String!, gender: String):Boolean
+}
